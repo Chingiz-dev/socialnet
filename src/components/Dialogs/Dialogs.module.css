@@ -1,0 +1,32 @@
+.dialogs {
+  background-color: greenyellow;
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  gap: 5px;
+}
+
+.dialogsItems {
+  padding: 10px;
+}
+
+.dialog {
+  border: 1px dotted red;
+  border-radius: 5px;
+  background-color: yellowgreen;
+  padding: 3px;
+  margin: 3px;
+}
+
+.dialogActive {
+  background-color: yellow;
+}
+
+.messages {
+    padding: 20px;
+}
+
+.message {
+    margin: 5px;
+    background-color: thistle;
+    color: blue;
+}
