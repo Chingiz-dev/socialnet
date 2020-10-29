@@ -3,7 +3,7 @@ let reduxState = {
     postData: [
       { id: 1, text: "learn React", likes: 7 },
       { id: 2, text: "awesome", likes: 3 },
-      { id: 1, text: "learn Redux", likes: 11 },
+      { id: 3, text: "learn Redux", likes: 11 },
     ],
   },
   messagesPage: {
@@ -21,7 +21,7 @@ let reduxState = {
       { id: 4, message: "Need hepl" },
       { id: 5, message: "Rojer that" },
       { id: 6, message: "How dare you?" },
-      { id: 6, message: "What's wrong?" },
+      { id: 7, message: "What's wrong?" },
     ],
   },
   friendsPage: {

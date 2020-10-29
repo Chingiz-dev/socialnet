@@ -5,7 +5,6 @@ import Messages from "./Messages/Messages.js";
 
 
 const Dialogs = (props) => {
-  debugger;
 let messages = props.state.messagesData.map((m) => (
   <Messages key={m.id} message={m.message} />
 ));
