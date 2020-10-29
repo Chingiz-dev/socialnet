@@ -21,11 +21,21 @@ const App = () => {
           <Route path="/main">
             <Main />
           </Route>
-          <Route path="/dialogs" component={Dialogs} />
-          <Route path="/news" component={News} />
-          <Route path="/music" component={Music} />
-          <Route path="/settings" component={Settings} />
-          <Route path="/documentation" component={Documentation} />
+          <Route path="/dialogs">
+            <Dialogs />
+          </Route>
+          <Route path="/news">
+            <News />
+          </Route>
+          <Route path="/music">
+            <Music />
+          </Route>
+          <Route path="/settings">
+            <Settings />
+          </Route>
+          <Route path="/documentation">
+            <Documentation />
+          </Route>
         </div>
       </div>
     </Router>
