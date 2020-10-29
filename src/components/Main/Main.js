@@ -8,8 +8,8 @@ const Profile = (props) => {
       <div>
         <img
           className={st.img}
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSQKU__vS_fUS7Ly8f-df2FfYqsYsLQ4RSAXw&usqp=CAU"
-          alt="bike"
+          src="https://i.pinimg.com/originals/28/9d/4b/289d4bdac73819cd3a48bd7a238810ef.jpg"
+          alt="rose beach"
         />
       </div>
       <div>ava + description</div>
