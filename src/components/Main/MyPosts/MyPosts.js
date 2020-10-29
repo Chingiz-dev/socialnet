@@ -2,17 +2,12 @@ import React from "react";
 import st from "./MyPosts.module.css";
 import Post from "./Post/Post.js";
 
-let postData = [
-  { id: 1, text: "learn React", likes: 7 },
-  { id: 2, text: "awesome", likes: 3 },
-  { id: 1, text: "learn Redux", likes: 11 },
-];
 
-let posts = postData.map((p) => (
-  <Post key={p.id} text={p.text} likes={p.likes} />
-));
-
-const MyPosts = () => {
+const MyPosts = (props) => {
+  let posts = props.postData.map((p) => (
+    <Post key={p.id} text={p.text} likes={p.likes} />
+  ));
+  
   return (
     <div>
       <div>

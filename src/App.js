@@ -10,7 +10,7 @@ import Settings from "./components/Settings/Settings.js";
 import Documentation from "./components/Documentation/Documentation.js";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-const App = () => {
+const App = (props) => {
   return (
     <Router>
       {" "}
@@ -19,10 +19,13 @@ const App = () => {
         <Nav />
         <div className="app-wrapper-content">
           <Route path="/main">
-            <Main />
+            <Main postData={props.postData} />
           </Route>
           <Route path="/dialogs">
-            <Dialogs />
+            <Dialogs
+              messagesData={props.messagesData}
+              dialogData={props.dialogData}
+            />
           </Route>
           <Route path="/news">
             <News />

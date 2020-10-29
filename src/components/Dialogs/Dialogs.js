@@ -3,30 +3,14 @@ import st from "./Dialogs.module.css";
 import Dialog from "./Dialog/Dialog.js";
 import Messages from "./Messages/Messages.js";
 
-let dialogData = [
-  { id: 1, name: "jon" },
-  { id: 2, name: "sara" },
-  { id: 3, name: "nity" },
-  { id: 4, name: "kate" },
-  { id: 5, name: "suzy" },
-];
 
-let messagesData = [
-  { id: 1, message: "Hello" },
-  { id: 2, message: "What's up?" },
-  { id: 3, message: "React is awesome" },
-  { id: 4, message: "Need hepl" },
-  { id: 5, message: "Rojer that" },
-  { id: 6, message: "How dare you?" },
-];
-
-let messages = messagesData.map((m) => (
+const Dialogs = (props) => {
+  
+let messages = props.messagesData.map((m) => (
   <Messages key={m.id} message={m.message} />
 ));
 
-let dialogs = dialogData.map((d) => <Dialog id={d.id} name={d.name} />);
-
-const Dialogs = () => {
+let dialogs = props.dialogData.map((d) => <Dialog id={d.id} name={d.name} />);
   return (
     <div className={st.dialogs}>
       <div className={st.dialogsItems}>
