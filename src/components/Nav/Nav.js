@@ -3,7 +3,7 @@ import st from "./Nav.module.css";
 import { NavLink } from "react-router-dom";
 
 const Nav = (props) => {
-  let friends = props.state.friends.map((f) => <div>{f.name}</div>);
+  let friends = props.state.friends.map((f) => <div key={f.id}>{f.name}</div>);
   return (
     <nav className={st.nav}>
       <div className={st.item}>

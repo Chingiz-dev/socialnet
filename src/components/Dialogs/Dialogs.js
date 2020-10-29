@@ -9,7 +9,7 @@ let messages = props.state.messagesData.map((m) => (
   <Messages key={m.id} message={m.message} />
 ));
 
-let dialogs = props.state.dialogData.map((d) => <Dialog id={d.id} name={d.name} />);
+let dialogs = props.state.dialogData.map((d) => <Dialog key={d.id} id={d.id} name={d.name} />);
   return (
     <div className={st.dialogs}>
       <div className={st.dialogsItems}>

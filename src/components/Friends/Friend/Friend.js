@@ -1,7 +1,7 @@
 import React from "react";
 const Friend = (props) => {
   return (
-    <div key={props.friend.id}>
+    <div>
       <img
         src={props.friend.picture}
         alt={props.friend.name + "friend's name"}

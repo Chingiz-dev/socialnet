@@ -4,7 +4,7 @@ import st from "./../Dialogs.module.css";
 
 const Dialog = (props) => {
   return (
-    <div className={st.dialog + " " + st.dialogActive} key={props.id}>
+    <div className={st.dialog + " " + st.dialogActive} >
       <NavLink to={"/dialogs/" + props.id}>{props.name}</NavLink>
     </div>
   );
