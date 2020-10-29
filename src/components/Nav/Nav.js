@@ -2,7 +2,8 @@ import React from "react";
 import st from "./Nav.module.css";
 import { NavLink } from "react-router-dom";
 
-const Nav = () => {
+const Nav = (props) => {
+  let friends = props.state.friends.map((f) => <div>{f.name}</div>);
   return (
     <nav className={st.nav}>
       <div className={st.item}>
@@ -33,6 +34,12 @@ const Nav = () => {
       <div className={st.item}>
         <NavLink to="/documentation" activeClassName={st.activeLink}>
           Documentation
+        </NavLink>
+      </div>
+      <div className={st.friends}>
+        Friends
+        <NavLink to="/friends" activeClassName={st.activeLink}>
+          <div>{friends}</div>
         </NavLink>
       </div>
     </nav>

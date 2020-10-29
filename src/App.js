@@ -8,27 +8,24 @@ import News from "./components/News/News.js";
 import Music from "./components/Music/Music.js";
 import Settings from "./components/Settings/Settings.js";
 import Documentation from "./components/Documentation/Documentation.js";
+import Friends from "./components/Friends/Friends";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 const App = (props) => {
   return (
     <Router>
-      {" "}
       <div className="app-wrapper">
         <Header />
-        <Nav />
+        <Nav state={props.state.friendsPage} />
         <div className="app-wrapper-content">
           {/* Must post props this way */}
           <Route
             path="/main"
-            render={() => <Main postData={props.postData} />}
+            render={() => <Main state={props.state.profilePage} />}
           />
           {/* Can post props this way also */}
           <Route path="/dialogs">
-            <Dialogs
-              messagesData={props.messagesData}
-              dialogData={props.dialogData}
-            />
+            <Dialogs state={props.state.messagesPage} />
           </Route>
           <Route path="/news">
             <News />
@@ -42,6 +39,7 @@ const App = (props) => {
           <Route path="/documentation">
             <Documentation />
           </Route>
+          <Route path="/friends" render={() => <Friends state={props.state.friendsPage}/>} />
         </div>
       </div>
     </Router>
