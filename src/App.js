@@ -18,9 +18,12 @@ const App = (props) => {
         <Header />
         <Nav />
         <div className="app-wrapper-content">
-          <Route path="/main">
-            <Main postData={props.postData} />
-          </Route>
+          {/* Must post props this way */}
+          <Route
+            path="/main"
+            render={() => <Main postData={props.postData} />}
+          />
+          {/* Can post props this way also */}
           <Route path="/dialogs">
             <Dialogs
               messagesData={props.messagesData}
