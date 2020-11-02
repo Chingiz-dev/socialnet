@@ -20,11 +20,16 @@ const App = (props) => {
         {/* Must post props this way */}
         <Route
           path="/main"
-          render={() => <Main state={props.state.profilePage} />}
+          render={() => (
+            <Main state={props.state.profilePage} addPost={props.addPost} />
+          )}
         />
         {/* Can post props this way also */}
         <Route path="/dialogs">
-          <Dialogs state={props.state.messagesPage} />
+          <Dialogs
+            state={props.state.messagesPage}
+            addMessage={props.addMessage}
+          />
         </Route>
         <Route path="/news">
           <News />

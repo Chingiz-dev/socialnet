@@ -5,11 +5,12 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import reduxState from "./redux/reduxState";
+import { addPost, addMessage } from "./redux/reduxState";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <App state={reduxState} />
+      <App state={reduxState} addMessage={addMessage} addPost={addPost} />
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
