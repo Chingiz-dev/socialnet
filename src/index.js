@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
@@ -7,9 +8,9 @@ import reduxState from "./redux/reduxState";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App
-      state={reduxState}
-    />
+    <Router>
+      <App state={reduxState} />
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );
