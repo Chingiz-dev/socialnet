@@ -1,3 +1,5 @@
+import rerenderAll from "../render";
+
 let reduxState = {
   profilePage: {
     postData: [
@@ -46,14 +48,14 @@ export let addPost = (newPost) => {
   let newPostId = reduxState.profilePage.postData.length;
   let post = { id: newPostId, text: newPost, likes: 0 };
   reduxState.profilePage.postData.push(post);
-  console.log(post);
+  rerenderAll(reduxState);
 };
 
 export let addMessage = (newMessage) => {
   let newMessageId = reduxState.messagesPage.messagesData.length;
   let message = { id: newMessageId, message: newMessage };
   reduxState.messagesPage.messagesData.push(message);
-  console.log(message);
+  rerenderAll(reduxState);
 };
 
 export default reduxState;
