@@ -2,7 +2,7 @@ import React from "react";
 import st from "./Documentation.module.css";
 import BlockSchema from "../../images/BlockSchema.bmp";
 import UIandBLL from "../../images/UIandBLL.bmp";
-import Task33 from "../../images/Task33.png";
+import Task33 from "../../images/task33.png";
 const Documentation = () => {
   return (
     <div>
