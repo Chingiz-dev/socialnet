@@ -46,12 +46,14 @@ export let addPost = (newPost) => {
   let newPostId = reduxState.profilePage.postData.length;
   let post = { id: newPostId, text: newPost, likes: 0 };
   reduxState.profilePage.postData.push(post);
+  console.log(post);
 };
 
 export let addMessage = (newMessage) => {
   let newMessageId = reduxState.messagesPage.messagesData.length;
   let message = { id: newMessageId, message: newMessage };
   reduxState.messagesPage.messagesData.push(message);
+  console.log(message);
 };
 
 export default reduxState;
