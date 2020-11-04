@@ -7,6 +7,7 @@ let reduxState = {
       { id: 2, text: "awesome", likes: 3 },
       { id: 3, text: "learn Redux", likes: 11 },
     ],
+    newPostData: "",
   },
   messagesPage: {
     dialogData: [
@@ -25,6 +26,7 @@ let reduxState = {
       { id: 6, message: "How dare you?" },
       { id: 7, message: "What's wrong?" },
     ],
+    newMessageData: "",
   },
   friendsPage: {
     friends: [
@@ -44,17 +46,29 @@ let reduxState = {
   },
 };
 
-export let addPost = (newPost) => {
-  let newPostId = reduxState.profilePage.postData.length;
-  let post = { id: newPostId, text: newPost, likes: 0 };
+export let addPost = () => {
+  let newPostId = reduxState.profilePage.postData.length + 1;
+  let post = { id: newPostId, text: reduxState.profilePage.newPostData, likes: 0 };
   reduxState.profilePage.postData.push(post);
+  reduxState.profilePage.newPostData = "";
   rerenderAll(reduxState);
 };
 
-export let addMessage = (newMessage) => {
-  let newMessageId = reduxState.messagesPage.messagesData.length;
-  let message = { id: newMessageId, message: newMessage };
-  reduxState.messagesPage.messagesData.push(message);
+export let newPostData = (newPostData) => {
+  reduxState.profilePage.newPostData = newPostData;
+  rerenderAll(reduxState);
+};
+
+export let addMessage = () => {
+  let newMessageId = reduxState.messagesPage.messagesData.length + 1;
+  let newMessageObj = { id: newMessageId, message: reduxState.messagesPage.newMessageData };
+  reduxState.messagesPage.messagesData.push(newMessageObj);
+  reduxState.messagesPage.newMessageData = '';
+  rerenderAll(reduxState);
+};
+
+export let newMessageData = (data) => {
+  reduxState.messagesPage.newMessageData = data;
   rerenderAll(reduxState);
 };
 

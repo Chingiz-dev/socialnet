@@ -21,7 +21,10 @@ const App = (props) => {
         <Route
           path="/main"
           render={() => (
-            <Main state={props.state.profilePage} addPost={props.addPost} />
+            <Main 
+            state={props.state.profilePage} 
+            addPost={props.addPost} 
+            newPostData={props.newPostData} />
           )}
         />
         {/* Can post props this way also */}
@@ -29,6 +32,7 @@ const App = (props) => {
           <Dialogs
             state={props.state.messagesPage}
             addMessage={props.addMessage}
+            newMessageData={props.newMessageData}
           />
         </Route>
         <Route path="/news">
